@@ -220,14 +220,13 @@
           <docfilessubdirs>true</docfilessubdirs>
           <javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
           <links>
-            <link>https://javadoc.io/doc/org.mockito/mockito-core/${mockito.version}/</link>
-            <link>https://javadoc.io/doc/org.junit.jupiter/junit-jupiter-api/${junit.version}/</link>
+            <link>https://javadoc.io/doc/org.jetbrains/annotations/jetbrains-annotations.version/</link>
           </links>
           <offline>false</offline>
           <show>public</show>
           <top><![CDATA[
 <link rel="stylesheet" type="text/css" href="{@docRoot}/resources/prism.css"/>
-<link rel="stylesheet" type="text/css" href="{@docRoot}/resources/mock-loggers.css"/>
+<link rel="stylesheet" type="text/css" href="{@docRoot}/resources/ride-cost-estimator.css"/>
 							]]></top>
         </configuration>
         <groupId>org.apache.maven.plugins</groupId>
@@ -318,7 +317,66 @@
   </licenses>
   <modelVersion>4.0.0</modelVersion>
   <name>Ride Cost Estimator</name>
+  <profiles>
+    <profile>
+      <build>
+        <defaultGoal>clean deploy</defaultGoal>
+        <plugins>
+          <plugin>
+            <artifactId>central-publishing-maven-plugin</artifactId>
+            <configuration>
+              <deploymentName>Ride Cost Estimator</deploymentName>
+              <ignorePublishedComponents>true</ignorePublishedComponents>
+              <publishingServerId>central</publishingServerId>
+            </configuration>
+            <extensions>true</extensions>
+            <groupId>org.sonatype.central</groupId>
+          </plugin>
+          <plugin>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+                <id>attach-javadocs</id>
+              </execution>
+            </executions>
+            <groupId>org.apache.maven.plugins</groupId>
+          </plugin>
+          <plugin>
+            <artifactId>maven-source-plugin</artifactId>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+                <id>attach-sources</id>
+              </execution>
+            </executions>
+            <groupId>org.apache.maven.plugins</groupId>
+          </plugin>
+          <plugin>
+            <artifactId>sign-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+            <groupId>org.simplify4u.plugins</groupId>
+          </plugin>
+        </plugins>
+      </build>
+      <!--
+       Publish a release
+      -->
+      <id>release</id>
+    </profile>
+  </profiles>
   <properties>
+    <jetbrains-annotations.version>26.0.2-1</jetbrains-annotations.version>
     <java.version>17</java.version>
     <junit.version>6.0.0</junit.version>
     <mockito.version>5.20.0</mockito.version>
