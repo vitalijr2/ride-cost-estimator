@@ -19,26 +19,15 @@
  */
 package io.gitlab.vitalijr2.ridecost.estimator.internal;
 
-import io.gitlab.vitalijr2.ridecost.estimator.RideCostEstimator;
 import java.math.BigDecimal;
-import java.math.MathContext;
-import org.jetbrains.annotations.NotNull;
+import java.util.function.BiConsumer;
 
-/**
- * Calculates the cost based on fuel consumption per 100 units of distance.
- */
-public class VolumeByDistanceEstimator extends AbstractRideCostEstimator implements RideCostEstimator {
+public class AbstractRideCostEstimator {
 
-  private static final BigDecimal ONE_HUNDRED = new BigDecimal(100);
-
-  @Override
-  public @NotNull BigDecimal estimateCostOfRide(@NotNull BigDecimal mileage, @NotNull BigDecimal price,
-      @NotNull BigDecimal distance) throws IllegalArgumentException {
-    isPositive.accept(mileage, "Mileage");
-    isPositive.accept(price, "Price");
-    isPositive.accept(distance, "Distance");
-
-    return distance.divide(ONE_HUNDRED, MathContext.DECIMAL32).multiply(mileage).multiply(price);
-  }
+  protected static final BiConsumer<BigDecimal, String> isPositive = (value, name) -> {
+    if (value.compareTo(BigDecimal.ZERO) <= 0) {
+      throw new IllegalArgumentException(name + " must be greater than zero");
+    }
+  };
 
 }

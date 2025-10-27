@@ -56,8 +56,9 @@ public interface RideCostEstimator {
    * @param price    fuel price
    * @param distance length of a ride
    * @return cost of a ride
+   * @throws IllegalArgumentException if any parameter isn't positive.
    */
-  default double estimateCostOfRide(double mileage, double price, long distance) {
+  default double estimateCostOfRide(double mileage, double price, long distance) throws IllegalArgumentException {
     return estimateCostOfRide(BigDecimal.valueOf(mileage), BigDecimal.valueOf(price),
         BigDecimal.valueOf(distance)).doubleValue();
   }
@@ -69,9 +70,10 @@ public interface RideCostEstimator {
    * @param price    fuel price
    * @param distance length of a ride
    * @return cost of a ride
+   * @throws IllegalArgumentException if any parameter isn't positive.
    */
   @NotNull BigDecimal estimateCostOfRide(@NotNull BigDecimal mileage, @NotNull BigDecimal price,
-      @NotNull BigDecimal distance);
+      @NotNull BigDecimal distance) throws IllegalArgumentException;
 
 
 }
