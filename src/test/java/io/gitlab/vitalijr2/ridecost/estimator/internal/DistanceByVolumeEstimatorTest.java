@@ -2,12 +2,14 @@ package io.gitlab.vitalijr2.ridecost.estimator.internal;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @Tag("fast")
 class DistanceByVolumeEstimatorTest {
 
+  @DisplayName("Happy path")
   @Test
   void estimateCostOfRide() {
     // given
