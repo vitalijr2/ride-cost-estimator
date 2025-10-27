@@ -1,0 +1,5 @@
+---
+exclude_paths:
+  - "**/mock-loggers.css"
+  - "**/prism.css"
+  - "**/prism.js"
