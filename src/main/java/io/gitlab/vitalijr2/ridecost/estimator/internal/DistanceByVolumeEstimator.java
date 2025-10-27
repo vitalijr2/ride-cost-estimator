@@ -27,11 +27,15 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Calculates the cost based on distance for 1 unit of fuel.
  */
-public class DistanceByVolumeEstimator implements RideCostEstimator {
+public class DistanceByVolumeEstimator extends AbstractRideCostEstimator implements RideCostEstimator {
 
   @Override
   public @NotNull BigDecimal estimateCostOfRide(@NotNull BigDecimal mileage, @NotNull BigDecimal price,
-      @NotNull BigDecimal distance) {
+      @NotNull BigDecimal distance) throws IllegalArgumentException {
+    isPositive.accept(mileage, "Mileage");
+    isPositive.accept(price, "Price");
+    isPositive.accept(distance, "Distance");
+
     return distance.divide(mileage, MathContext.DECIMAL32).multiply(price);
   }
 
