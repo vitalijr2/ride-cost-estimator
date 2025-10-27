@@ -36,6 +36,8 @@ See full text [here](LICENSE "the LICENSE file").
 [![Java Version][java-version]][jdk-download]
 [![License][license-badge]][license-link]  
 [![GitLab master pipeline][gitlab-master-pipeline]][gitlab-master-pipeline-link]
+[![Codacy Badge][codacy-badge]][codacy-badge-link]
+[![Codacy Coverage][codacy-coverage]][codacy-coverage-link]
 ![GitLab last commit][gitlab-last-commit]
 [![Today's hits][today-hits]][today-hits-link]
 
@@ -54,6 +56,15 @@ See full text [here](LICENSE "the LICENSE file").
 [gitlab-master-pipeline]: https://gitlab.com/vitalijr2/ride-cost-estimator/badges/master/pipeline.svg
 
 [gitlab-master-pipeline-link]: https://gitlab.com/vitalijr2/ride-cost-estimator/-/commits/master
+
+[codacy-badge]: https://app.codacy.com/project/badge/Grade/153f5bc0810442ffb11b4fba643f6011
+
+[codacy-badge-link]: https://app.codacy.com/gl/vitalijr2/ride-cost-estimator/dashboard?utm_source=gl&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
+
+[codacy-coverage]: https://app.codacy.com/project/badge/Coverage/153f5bc0810442ffb11b4fba643f6011
+
+[codacy-coverage-link]: https://app.codacy.com/gl/vitalijr2/ride-cost-estimator/dashboard?utm_source=gl&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage
+
 
 [gitlab-last-commit]: https://img.shields.io/gitlab/last-commit/vitalijr2/ride-cost-estimator
 
