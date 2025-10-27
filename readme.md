@@ -65,7 +65,6 @@ See full text [here](LICENSE "the LICENSE file").
 
 [codacy-coverage-link]: https://app.codacy.com/gl/vitalijr2/ride-cost-estimator/dashboard?utm_source=gl&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage
 
-
 [gitlab-last-commit]: https://img.shields.io/gitlab/last-commit/vitalijr2/ride-cost-estimator
 
 [today-hits]: https://hits.sh/github.com/vitalijr2/ride-cost-estimator.svg?view=today-total&label=today's%20hits
