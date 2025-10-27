@@ -44,8 +44,6 @@ class RideCostEstimatorSlowTest {
     // then
     assertAll("Volume by distance estimator", () -> assertInstanceOf(VolumeByDistanceEstimator.class, estimator),
         () -> assertThat(exception.getMessage(), startsWith(expectedName)));
-
-    ;
   }
 
 }
