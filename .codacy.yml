@@ -1,5 +1,5 @@
 ---
 exclude_paths:
-  - "**/mock-loggers.css"
+  - "**/ride-cost-estimator.css"
   - "**/prism.css"
   - "**/prism.js"
