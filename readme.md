@@ -2,11 +2,46 @@
 
 Mileage-Based Ride Cost Estimator Library.
 
+In addition to the [GitLab page][gl-project], this project can also be found on [GitHub][gh-project].
+
+## Contributing
+
+Please read [Contributing](contributing.md).
+
+## History
+
+See [Changelog](changelog.md)
+
+## License
+
+```text
+Copyright (C) 2024 Vitalij Berdinskih
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
+
+See full text [here](LICENSE "the LICENSE file").
+
+
 [![Java Version][java-version]][jdk-download]
 [![License][license-badge]][license-link]  
 [![GitLab master pipeline][gitlab-master-pipeline]][gitlab-master-pipeline-link]
 ![GitLab last commit][gitlab-last-commit]
 [![Today's hits][today-hits]][today-hits-link]
+
+[gl-project]: https://gitlab.com/vitalijr2/ride-cost-estimator
+
+[gh-project]: https://github.com/vitalijr2/ride-cost-estimator
 
 [java-version]: https://img.shields.io/static/v1?label=Java&message=17&color=blue&logoColor=E23D28
 
@@ -16,9 +51,9 @@ Mileage-Based Ride Cost Estimator Library.
 
 [license-link]: https://www.apache.org/licenses/LICENSE-2.0.html
 
-[gitlab-master-pipeline]: https://gitlab.com/vitalijr2/mock-loggers/badges/master/pipeline.svg
+[gitlab-master-pipeline]: https://gitlab.com/vitalijr2/ride-cost-estimator/badges/master/pipeline.svg
 
-[gitlab-master-pipeline-link]: https://gitlab.com/vitalijr2/mock-loggers/-/commits/master
+[gitlab-master-pipeline-link]: https://gitlab.com/vitalijr2/ride-cost-estimator/-/commits/master
 
 [gitlab-last-commit]: https://img.shields.io/gitlab/last-commit/vitalijr2/ride-cost-estimator
 
