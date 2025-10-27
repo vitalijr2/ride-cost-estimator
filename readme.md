@@ -4,6 +4,14 @@ Mileage-Based Ride Cost Estimator Library.
 
 In addition to the [GitLab page][gl-project], this project can also be found on [GitHub][gh-project].
 
+[![Java Version][java-version]][jdk-download]
+[![License][license-badge]][license-link]  
+[![GitLab master pipeline][gitlab-master-pipeline]][gitlab-master-pipeline-link]
+[![Codacy Badge][codacy-badge]][codacy-badge-link]
+[![Codacy Coverage][codacy-coverage]][codacy-coverage-link]
+![GitLab last commit][gitlab-last-commit]
+[![Today's hits][today-hits]][today-hits-link]
+
 ## Contributing
 
 Please read [Contributing](contributing.md).
@@ -31,14 +39,6 @@ limitations under the License.
 ```
 
 See full text [here](LICENSE "the LICENSE file").
-
-[![Java Version][java-version]][jdk-download]
-[![License][license-badge]][license-link]  
-[![GitLab master pipeline][gitlab-master-pipeline]][gitlab-master-pipeline-link]
-[![Codacy Badge][codacy-badge]][codacy-badge-link]
-[![Codacy Coverage][codacy-coverage]][codacy-coverage-link]
-![GitLab last commit][gitlab-last-commit]
-[![Today's hits][today-hits]][today-hits-link]
 
 [gl-project]: https://gitlab.com/vitalijr2/ride-cost-estimator
 
