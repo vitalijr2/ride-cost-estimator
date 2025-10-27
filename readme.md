@@ -32,7 +32,6 @@ limitations under the License.
 
 See full text [here](LICENSE "the LICENSE file").
 
-
 [![Java Version][java-version]][jdk-download]
 [![License][license-badge]][license-link]  
 [![GitLab master pipeline][gitlab-master-pipeline]][gitlab-master-pipeline-link]
