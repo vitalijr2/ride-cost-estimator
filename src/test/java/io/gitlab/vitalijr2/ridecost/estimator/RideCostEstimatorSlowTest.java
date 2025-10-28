@@ -14,7 +14,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 @Tag("slow")
 class RideCostEstimatorSlowTest {
 
-  @DisplayName("Distance by volume estimator: all parameters must be positive")
+  @DisplayName("Distance by volume estimator")
   @ParameterizedTest(name = "{3}")
   @CsvSource({"0,64.99,475,Mileage", "15.873,-1,475,Price", "15.873,64.99,-99,Distance"})
   void distanceByVolumeEstimator(double mileage, double price, long distance, String expectedName) {
@@ -25,7 +25,7 @@ class RideCostEstimatorSlowTest {
     assertInstanceOf(DistanceByVolumeEstimator.class, estimator, "Distance by volume estimator");
   }
 
-  @DisplayName("Volume by distance estimator: all parameters must be positive")
+  @DisplayName("Volume by distance estimator")
   @ParameterizedTest(name = "{3}")
   @CsvSource({"0,64.99,475,Mileage", "15.873,-1,475,Price", "15.873,64.99,-99,Distance"})
   void volumeByDistanceEstimator(double mileage, double price, long distance, String expectedName) {
