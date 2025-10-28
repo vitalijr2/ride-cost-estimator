@@ -30,12 +30,8 @@ import org.jetbrains.annotations.NotNull;
 public class DistanceByVolumeEstimator extends AbstractRideCostEstimator implements RideCostEstimator {
 
   @Override
-  public @NotNull BigDecimal estimateCostOfRide(@NotNull BigDecimal mileage, @NotNull BigDecimal price,
-      @NotNull BigDecimal distance) throws IllegalArgumentException {
-    isPositive.accept(mileage, "Mileage");
-    isPositive.accept(price, "Price");
-    isPositive.accept(distance, "Distance");
-
+  protected @NotNull BigDecimal costByMileageAndPrice(@NotNull BigDecimal mileage, @NotNull BigDecimal price,
+      @NotNull BigDecimal distance) {
     return distance.divide(mileage, MathContext.DECIMAL32).multiply(price);
   }
 

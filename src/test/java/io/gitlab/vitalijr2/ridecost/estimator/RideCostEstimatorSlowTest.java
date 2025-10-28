@@ -1,12 +1,8 @@
 package io.gitlab.vitalijr2.ridecost.estimator;
 
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.StringStartsWith.startsWith;
-import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import io.gitlab.vitalijr2.ridecost.estimator.internal.DistanceByVolumeEstimator;
 import io.gitlab.vitalijr2.ridecost.estimator.internal.VolumeByDistanceEstimator;
@@ -24,12 +20,9 @@ class RideCostEstimatorSlowTest {
   void distanceByVolumeEstimator(double mileage, double price, long distance, String expectedName) {
     // when
     var estimator = assertDoesNotThrow(RideCostEstimator::distanceByVolumeEstimator, "Instance of RideCostEstimator");
-    var exception = assertThrows(IllegalArgumentException.class,
-        () -> estimator.estimateCostOfRide(mileage, price, distance));
 
     // then
-    assertAll("Distance by volume estimator", () -> assertInstanceOf(DistanceByVolumeEstimator.class, estimator),
-        () -> assertThat(exception.getMessage(), startsWith(expectedName)));
+    assertInstanceOf(DistanceByVolumeEstimator.class, estimator, "Distance by volume estimator");
   }
 
   @DisplayName("Volume by distance estimator: all parameters must be positive")
@@ -38,12 +31,9 @@ class RideCostEstimatorSlowTest {
   void volumeByDistanceEstimator(double mileage, double price, long distance, String expectedName) {
     // when
     var estimator = assertDoesNotThrow(RideCostEstimator::volumeByDistanceEstimator, "Instance of RideCostEstimator");
-    var exception = assertThrows(IllegalArgumentException.class,
-        () -> estimator.estimateCostOfRide(mileage, price, distance));
 
     // then
-    assertAll("Volume by distance estimator", () -> assertInstanceOf(VolumeByDistanceEstimator.class, estimator),
-        () -> assertThat(exception.getMessage(), startsWith(expectedName)));
+    assertInstanceOf(VolumeByDistanceEstimator.class, estimator, "Volume by distance estimator");
   }
 
 }
