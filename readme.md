@@ -5,7 +5,10 @@ Mileage-Based Ride Cost Estimator Library.
 In addition to the [GitLab page][gl-project], this project can also be found on [GitHub][gh-project].
 
 [![Java Version][java-version]][jdk-download]
-[![License][license-badge]][license-link]  
+[![License][license-badge]][license-link]
+![Maven Central Last Update][maven-central-last-update]
+[![Maven Central][maven-central]][maven-central-link]
+[![Javadoc][javadoc]][javadoc-link]  
 [![GitLab master pipeline][gitlab-master-pipeline]][gitlab-master-pipeline-link]
 [![Codacy Badge][codacy-badge]][codacy-badge-link]
 [![Codacy Coverage][codacy-coverage]][codacy-coverage-link]
@@ -71,6 +74,16 @@ See full text [here](LICENSE "the LICENSE file").
 [license-badge]: https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat
 
 [license-link]: https://www.apache.org/licenses/LICENSE-2.0.html
+
+[maven-central-last-update]: https://img.shields.io/maven-central/last-update/io.gitlab.vitalijr2.ridecost/ride-cost-estimator
+
+[maven-central]: https://img.shields.io/maven-central/v/io.gitlab.vitalijr2.ridecost/ride-cost-estimator
+
+[maven-central-link]: https://central.sonatype.com/artifact/io.gitlab.vitalijr2.ridecost/ride-cost-estimator?smo=true
+
+[javadoc]: https://javadoc.io/badge2/io.gitlab.vitalijr2.ridecost/ride-cost-estimator/javadoc.svg
+
+[javadoc-link]: https://javadoc.io/doc/io.gitlab.vitalijr2.ridecost/ride-cost-estimator
 
 [gitlab-master-pipeline]: https://gitlab.com/vitalijr2/ride-cost-estimator/badges/master/pipeline.svg
 
