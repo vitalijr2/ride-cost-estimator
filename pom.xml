@@ -308,6 +308,18 @@
       <scope>test</scope>
       <version>${mockito.version}</version>
     </dependency>
+    <dependency>
+      <artifactId>slf4j-jdk-platform-logging</artifactId>
+      <groupId>org.slf4j</groupId>
+      <scope>test</scope>
+      <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>slf4j-simple</artifactId>
+      <groupId>org.slf4j</groupId>
+      <scope>test</scope>
+      <version>${slf4j.version}</version>
+    </dependency>
   </dependencies>
   <description>Mileage-Based Ride Cost Estimator Library</description>
   <groupId>io.gitlab.vitalijr2.ridecost</groupId>
@@ -428,11 +440,12 @@
     </profile>
   </profiles>
   <properties>
-    <jetbrains-annotations.version>26.0.2-1</jetbrains-annotations.version>
     <java.version>17</java.version>
+    <jetbrains-annotations.version>26.0.2-1</jetbrains-annotations.version>
     <junit.version>6.0.0</junit.version>
     <mockito.version>5.20.0</mockito.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <slf4j.version>2.0.17</slf4j.version>
   </properties>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
 </project>

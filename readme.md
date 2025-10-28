@@ -5,12 +5,35 @@ Mileage-Based Ride Cost Estimator Library.
 In addition to the [GitLab page][gl-project], this project can also be found on [GitHub][gh-project].
 
 [![Java Version][java-version]][jdk-download]
-[![License][license-badge]][license-link]  
+[![License][license-badge]][license-link]
+![Maven Central Last Update][maven-central-last-update]
+[![Maven Central][maven-central]][maven-central-link]
+[![Javadoc][javadoc]][javadoc-link]  
 [![GitLab master pipeline][gitlab-master-pipeline]][gitlab-master-pipeline-link]
 [![Codacy Badge][codacy-badge]][codacy-badge-link]
 [![Codacy Coverage][codacy-coverage]][codacy-coverage-link]
 ![GitLab last commit][gitlab-last-commit]
 [![Today's hits][today-hits]][today-hits-link]
+
+## How to use
+
+This tiny library is for calculating the approximate cost of a trip.
+
+There are [two ways to determine the cost][fuel-economy]: one is based on the amount of fuel consumed per 100 kilometers
+or miles, the second uses the distance that can be traveled per unit volume (liter or gallon) of fuel. So if you are
+going to calculate the cost given the number of liters or gallons that your car consumes per 100 kilometers or miles,
+the corresponding instance of the estimator can be obtained through the `RideCostEstimator.volumeByDistanceEstimator()`.
+And if you know how much distance you can travel on one liter or gallon, then the instance of the estimator can
+be obtained through `RideCostEstimator.distanceByVolumeEstimator()`.
+
+The next step is the same for both cost calculation methods. Let's assume that the mileage is **123.45**, either liters
+per kilometer or miles per gallon, the price is **56.78**, and the trip distance is **123** kilometers or miles:
+
+```java
+var cost = estimator.estimateCostOfRide(123.45d, 56.789d, 123);
+```
+
+All three parameters must be positive, otherwise the method will throw an `IllegalArgumentException`.
 
 ## Contributing
 
@@ -52,6 +75,16 @@ See full text [here](LICENSE "the LICENSE file").
 
 [license-link]: https://www.apache.org/licenses/LICENSE-2.0.html
 
+[maven-central-last-update]: https://img.shields.io/maven-central/last-update/io.gitlab.vitalijr2.ridecost/ride-cost-estimator
+
+[maven-central]: https://img.shields.io/maven-central/v/io.gitlab.vitalijr2.ridecost/ride-cost-estimator
+
+[maven-central-link]: https://central.sonatype.com/artifact/io.gitlab.vitalijr2.ridecost/ride-cost-estimator?smo=true
+
+[javadoc]: https://javadoc.io/badge2/io.gitlab.vitalijr2.ridecost/ride-cost-estimator/javadoc.svg
+
+[javadoc-link]: https://javadoc.io/doc/io.gitlab.vitalijr2.ridecost/ride-cost-estimator
+
 [gitlab-master-pipeline]: https://gitlab.com/vitalijr2/ride-cost-estimator/badges/master/pipeline.svg
 
 [gitlab-master-pipeline-link]: https://gitlab.com/vitalijr2/ride-cost-estimator/-/commits/master
@@ -69,3 +102,5 @@ See full text [here](LICENSE "the LICENSE file").
 [today-hits]: https://hits.sh/github.com/vitalijr2/ride-cost-estimator.svg?view=today-total&label=today's%20hits
 
 [today-hits-link]: https://hits.sh/github.com/vitalijr2/ride-cost-estimators/
+
+[fuel-economy]: https://en.wikipedia.org/wiki/Fuel_economy_in_automobiles "Fuel economy in automobiles"

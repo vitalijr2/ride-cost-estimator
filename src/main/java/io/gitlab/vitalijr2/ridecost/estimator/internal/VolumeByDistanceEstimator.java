@@ -27,12 +27,12 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Calculates the cost based on fuel consumption per 100 units of distance.
  */
-public class VolumeByDistanceEstimator implements RideCostEstimator {
+public class VolumeByDistanceEstimator extends AbstractRideCostEstimator implements RideCostEstimator {
 
   private static final BigDecimal ONE_HUNDRED = new BigDecimal(100);
 
   @Override
-  public @NotNull BigDecimal estimateCostOfRide(@NotNull BigDecimal mileage, @NotNull BigDecimal price,
+  protected @NotNull BigDecimal costByMileageAndPrice(@NotNull BigDecimal mileage, @NotNull BigDecimal price,
       @NotNull BigDecimal distance) {
     return distance.divide(ONE_HUNDRED, MathContext.DECIMAL32).multiply(mileage).multiply(price);
   }
