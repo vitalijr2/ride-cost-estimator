@@ -3,10 +3,10 @@
  * <p>
  * This tiny library is for calculating the approximate cost of a trip.
  * <p>
- * There are [two ways to determine the cost][fuel-economy]: one is based on the amount of fuel consumed per 100
- * kilometers or miles, the second uses the distance that can be traveled per unit volume (liter or gallon) of fuel. So
- * if you are going to calculate the cost given the number of liters or gallons that your car consumes per 100
- * kilometers or miles, the corresponding instance of the estimator can be obtained through the
+ * There are two ways to determine the cost: one is based on the amount of fuel consumed per 100 kilometers or miles,
+ * the second uses the distance that can be traveled per unit volume (liter or gallon) of fuel. So if you are going to
+ * calculate the cost given the number of liters or gallons that your car consumes per 100 kilometers or miles, the
+ * corresponding instance of the estimator can be obtained through the
  * {@link io.gitlab.vitalijr2.ridecost.estimator.RideCostEstimator#volumeByDistanceEstimator()
  * volumeByDistanceEstimator()}. And if you know how much distance you can travel on one liter or gallon, then the
  * instance of the estimator can be obtained through
@@ -20,6 +20,8 @@
  * var cost = estimator.estimateCostOfRide(123.45d, 56.789d, 123);
  * </code></pre>
  * All three parameters must be positive, otherwise the method will throw an {@linkplain IllegalArgumentException}.
+ *
+ * @see <a href="https://en.wikipedia.org/wiki/Fuel_economy_in_automobiles">Fuel economy in automobiles</a>
  */
 module ride.cost.estimator {
   requires org.jetbrains.annotations;
