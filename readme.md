@@ -30,7 +30,7 @@ per kilometer or miles per gallon, the price is **56.78**, and the trip distance
 var cost = estimator.estimateCostOfRide(123.45d, 56.789d, 123);
 ```
 
-All three parameters must be positive, otherwise the method will throw an IllegalArgumentException.
+All three parameters must be positive, otherwise the method will throw an `IllegalArgumentException`.
 
 ## Contributing
 
