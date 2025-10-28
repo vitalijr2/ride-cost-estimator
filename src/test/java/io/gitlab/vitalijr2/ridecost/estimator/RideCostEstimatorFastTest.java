@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 @Tag("fast")
 class RideCostEstimatorFastTest {
 
-  @DisplayName("Estimate cost of a ride")
+  @DisplayName("Estimate cost of a ride (primitives -> big decimal)")
   @Test
   void estimateCostOfRideInPrimitives() {
     // given
