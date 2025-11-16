@@ -63,7 +63,7 @@ limitations under the License.
 
 See full text [here](LICENSE "the LICENSE file").
 
-[gl-project]: https://gitlab.com/vitalijr2/ride-cost-estimator
+[gl-project]: https://gitlab.com/ride-cost/ride-cost-estimator
 
 [gh-project]: https://github.com/vitalijr2/ride-cost-estimator
 
@@ -85,17 +85,17 @@ See full text [here](LICENSE "the LICENSE file").
 
 [javadoc-link]: https://javadoc.io/doc/io.gitlab.vitalijr2.ridecost/ride-cost-estimator
 
-[gitlab-master-pipeline]: https://gitlab.com/vitalijr2/ride-cost-estimator/badges/master/pipeline.svg
+[gitlab-master-pipeline]: https://gitlab.com/ride-cost/ride-cost-estimator/badges/master/pipeline.svg
 
-[gitlab-master-pipeline-link]: https://gitlab.com/vitalijr2/ride-cost-estimator/-/commits/master
+[gitlab-master-pipeline-link]: https://gitlab.com/ride-cost/ride-cost-estimator/-/commits/master
 
-[codacy-badge]: https://app.codacy.com/project/badge/Grade/153f5bc0810442ffb11b4fba643f6011
+[codacy-badge]: https://app.codacy.com/project/badge/Grade/fe0ead7ccfea4ffdb1f2c2b18decfa9e
 
-[codacy-badge-link]: https://app.codacy.com/gl/vitalijr2/ride-cost-estimator/dashboard?utm_source=gl&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
+[codacy-badge-link]: https://app.codacy.com/gl/ride-cost/ride-cost-estimator/dashboard?utm_source=gl&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
 
-[codacy-coverage]: https://app.codacy.com/project/badge/Coverage/153f5bc0810442ffb11b4fba643f6011
+[codacy-coverage]: https://app.codacy.com/project/badge/Coverage/fe0ead7ccfea4ffdb1f2c2b18decfa9e
 
-[codacy-coverage-link]: https://app.codacy.com/gl/vitalijr2/ride-cost-estimator/dashboard?utm_source=gl&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage
+[codacy-coverage-link]: https://app.codacy.com/gl/ride-cost/ride-cost-estimator/dashboard?utm_source=gl&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage
 
 [gitlab-last-commit]: https://img.shields.io/gitlab/last-commit/vitalijr2/ride-cost-estimator
 

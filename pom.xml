@@ -201,7 +201,7 @@
           </archive>
         </configuration>
         <groupId>org.apache.maven.plugins</groupId>
-        <version>3.4.2</version>
+        <version>3.5.0</version>
       </plugin>
       <plugin>
         <artifactId>maven-javadoc-plugin</artifactId>
@@ -273,7 +273,7 @@
   </build>
   <ciManagement>
     <system>GitLab Pipelines</system>
-    <url>https://gitlab.com/vitalijr2/ride-cost-estimator/-/pipelines</url>
+    <url>https://gitlab.com/ride-cost/ride-cost-estimator/-/pipelines</url>
   </ciManagement>
   <dependencies>
     <dependency>
@@ -339,7 +339,7 @@
   <inceptionYear>2025</inceptionYear>
   <issueManagement>
     <system>GitLab Issues</system>
-    <url>https://gitlab.com/vitalijr2/ride-cost-estimator/-/issues</url>
+    <url>https://gitlab.com/ride-cost/ride-cost-estimator/-/issues</url>
   </issueManagement>
   <licenses>
     <license>
@@ -459,16 +459,16 @@
   <properties>
     <java.version>17</java.version>
     <jetbrains-annotations.version>26.0.2-1</jetbrains-annotations.version>
-    <junit.version>6.0.0</junit.version>
+    <junit.version>6.0.1</junit.version>
     <mockito.version>5.20.0</mockito.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <slf4j.version>2.0.17</slf4j.version>
   </properties>
   <scm>
-    <connection>scm:git:https://gitlab.com/vitalijr2/ride-cost-estimator.git</connection>
-    <developerConnection>scm:git:git@gitlab.com:vitalijr2/ride-cost-estimator.git</developerConnection>
-    <url>https://gitlab.com/vitalijr2/ride-cost-estimator</url>
+    <connection>scm:git:https://gitlab.com/ride-cost/ride-cost-estimator.git</connection>
+    <developerConnection>scm:git:git@gitlab.com:ride-cost/ride-cost-estimator.git</developerConnection>
+    <url>https://gitlab.com/ride-cost/ride-cost-estimator</url>
   </scm>
-  <url>https://gitlab.com/vitalijr2/ride-cost-estimator</url>
-  <version>1.0.0</version>
+  <url>https://gitlab.com/ride-cost/ride-cost-estimator</url>
+  <version>1.0.1-SNAPSHOT</version>
 </project>
