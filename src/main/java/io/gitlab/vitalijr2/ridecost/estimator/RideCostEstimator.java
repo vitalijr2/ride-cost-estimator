@@ -19,10 +19,14 @@
  */
 package io.gitlab.vitalijr2.ridecost.estimator;
 
+import static java.util.Objects.isNull;
+
 import io.gitlab.vitalijr2.ridecost.estimator.internal.DistanceByVolumeEstimator;
 import io.gitlab.vitalijr2.ridecost.estimator.internal.VolumeByDistanceEstimator;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Mileage-Based Ride Cost Estimator.
@@ -82,6 +86,22 @@ public interface RideCostEstimator {
   }
 
   /**
+   * Estimate cost of a ride and round result.
+   *
+   * @param mileage  fuel economy
+   * @param price    fuel price
+   * @param distance length of a ride
+   * @param rounding round the result if possible
+   * @return cost of a ride
+   * @throws IllegalArgumentException if any parameter isn't positive.
+   */
+  default double estimateCostOfRide(double mileage, double price, long distance, @Nullable Rounding rounding)
+      throws IllegalArgumentException {
+    return estimateCostOfRide(BigDecimal.valueOf(mileage), BigDecimal.valueOf(price), BigDecimal.valueOf(distance),
+        rounding).doubleValue();
+  }
+
+  /**
    * Estimate cost of a ride.
    *
    * @param mileage  fuel economy
@@ -93,5 +113,74 @@ public interface RideCostEstimator {
   @NotNull BigDecimal estimateCostOfRide(@NotNull BigDecimal mileage, @NotNull BigDecimal price,
       @NotNull BigDecimal distance) throws IllegalArgumentException;
 
+
+  /**
+   * Estimate cost of a ride and round result.
+   *
+   * @param mileage  fuel economy
+   * @param price    fuel price
+   * @param distance length of a ride
+   * @param rounding round the result if possible
+   * @return cost of a ride
+   * @throws IllegalArgumentException if any parameter isn't positive.
+   */
+  default @NotNull BigDecimal estimateCostOfRide(@NotNull BigDecimal mileage, @NotNull BigDecimal price,
+      @NotNull BigDecimal distance, @Nullable Rounding rounding) throws IllegalArgumentException {
+    var cost = estimateCostOfRide(mileage, price, distance);
+
+    if (isNull(rounding)) {
+      return cost;
+    }
+
+    return cost.setScale(rounding.decimalPlaces, RoundingMode.HALF_UP);
+  }
+
+  /**
+   * How to round the cost: to a whole number, or to 2, 3, or 4 decimal places.
+   *
+   * @see <a href="https://www.iso.org/iso-4217-currency-codes.html">ISO 4217</a>
+   */
+  enum Rounding {
+
+    /**
+     * Rounding to a whole number.
+     */
+    WHOLE(0),
+    /**
+     * Rounding to two decimal places.
+     */
+    TWO_DECIMAL_PLACES(2),
+    /**
+     * Rounding to three decimal places.
+     */
+    THREE_DECIMAL_PLACES(3),
+    /**
+     * Rounding to four decimal places.
+     */
+    FOUR_DECIMAL_PLACES(4);
+
+    final int decimalPlaces;
+
+    Rounding(int decimalPlaces) {
+      this.decimalPlaces = decimalPlaces;
+    }
+
+    /**
+     * Get rounding by decimal places.
+     *
+     * @param decimalPlaces desired number of decimal places
+     * @return rounding, if any
+     */
+    @Nullable
+    public static Rounding valueOf(int decimalPlaces) {
+      for (Rounding rounding : values()) {
+        if (rounding.decimalPlaces == decimalPlaces) {
+          return rounding;
+        }
+      }
+      return null;
+    }
+
+  }
 
 }
