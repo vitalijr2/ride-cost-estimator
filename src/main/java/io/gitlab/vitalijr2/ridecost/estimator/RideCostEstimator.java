@@ -145,24 +145,32 @@ public interface RideCostEstimator {
     /**
      * Rounding to a whole number.
      */
-    WHOLE(0),
+    WHOLE(0, "a whole number"),
     /**
      * Rounding to two decimal places.
      */
-    TWO_DECIMAL_PLACES(2),
+    TWO_DECIMAL_PLACES(2, "two digits"),
     /**
      * Rounding to three decimal places.
      */
-    THREE_DECIMAL_PLACES(3),
+    THREE_DECIMAL_PLACES(3, "three digits"),
     /**
      * Rounding to four decimal places.
      */
-    FOUR_DECIMAL_PLACES(4);
+    FOUR_DECIMAL_PLACES(4, "four digits");
 
-    final int decimalPlaces;
+    /**
+     * Rounding scale value.
+     */
+    public final int decimalPlaces;
+    /**
+     * Rounding description.
+     */
+    public final String roundingDescription;
 
-    Rounding(int decimalPlaces) {
+    Rounding(int decimalPlaces, String roundingTarget) {
       this.decimalPlaces = decimalPlaces;
+      this.roundingDescription = "Round to " + roundingTarget;
     }
 
     /**
